@@ -396,6 +396,13 @@ footer {
     margin-bottom: 1rem;
 }
 
+.docs-content p i {
+    margin-right: 0.8rem;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
 pre {
     background: #2d3748;
     color: #edf2f7;
