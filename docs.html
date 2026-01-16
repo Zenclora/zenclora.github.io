@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Zenclora Linux</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Assets/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Fira+Code&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="releases.html">Releases</a>
+        <a href="docs.html">Docs</a>
+        <a href="index.html#download" class="btn-download">Download</a>
+    </nav>
+
+    <div class="container docs-layout">
+        <aside class="docs-sidebar">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="#about">What is it?</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#commands">Zenclora Commands</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </aside>
+
+        <main class="docs-content">
+            <section id="about">
+                <h2>What is Zenclora?</h2>
+                <p>Zenclora is a Debian-based desktop Linux distribution optimized for stability and daily use. Zenclora
+                    offers simplified package and system management commands to make Linux usage easier; it avoids
+                    unnecessary complexity while providing control to the user.</p>
+            </section>
+
+            <section id="installation">
+                <h2>Installation</h2>
+                <p>1. Download the ISO file from the website. Copy it to your USB drive using Ventoy or Rufus.</p>
+                <p>2. Enter your motherboard's BIOS and boot your system from the USB drive.</p>
+                <p><strong>Note:</strong> Zenclora supports most modern hardware. If your GPU is Nvidia, ensure it is
+                    compatible with nouveau.</p>
+                <p>Zenclora may not boot on very old hardware. A minimum of 4GB RAM is recommended. Additionally,
+                    problems may arise on very new hardware with low Linux compatibility.</p>
+                <p>Once you reach the Boot Screen, you can start in Live mode to try Zenclora, or start the Debian
+                    Installer to install it to your hard drive. Complete the necessary steps via the GUI, install your
+                    system, and start exploring!</p>
+                <p><strong>Note for Live Mode:</strong> When you press shut down in Live mode, you may see the Plymouth
+                    screen. Simply press the <strong>Enter</strong> key; this will safely remove the live-medium and
+                    resolve the shutdown issue.</p>
+            </section>
+
+            <section id="commands">
+                <h2>Zenclora Commands</h2>
+                <p>No more getting lost searching for repos on the internet or risking your system with old or fake
+                    repos. Zenclora saves you from wasting hours with its special commands. You can download the
+                    software you want using up-to-date and official repos. At the same time, system management scripts
+                    will save you from getting lost in the terminal for hours!</p>
+
+                <h3>System Management</h3>
+                <p>To update the system quickly, easily, and safely:</p>
+                <pre><code>sudo update</code></pre>
+
+                <p>To easily change your DNS:</p>
+                <pre><code>sudo change-dns</code></pre>
+
+                <h3>App Installation Shortcuts</h3>
+                <p>Install Flatpak quickly:</p>
+                <pre><code>install-flatpak</code></pre>
+
+                <p>Download Steam easily:</p>
+                <pre><code>install-steam</code></pre>
+
+                <p>Download Brave Browser easily:</p>
+                <pre><code>install-brave</code></pre>
+
+                <p>Download VSCode easily:</p>
+                <pre><code>install-vscode</code></pre>
+
+                <p>Download AI IDEs (Cursor, Windsurf, AntiGravity available!):</p>
+                <pre><code>install-vibecoding</code></pre>
+
+                <p>Download Office suites easily:</p>
+                <pre><code>install-officesuite</code></pre>
+
+                <p>Download Video Editing and Design programs:</p>
+                <pre><code>install-editor</code></pre>
+
+                <p>Download Music Production and Audio software:</p>
+                <pre><code>install-producer</code></pre>
+
+                <h3>Performance & Utility</h3>
+                <p>Install the fast Liquorix Kernel:</p>
+                <pre><code>install-liquorix</code></pre>
+                <p><small>*Check compatibility with your Nvidia card.</small></p>
+
+                <p>Use Zram to increase performance if you have low RAM:</p>
+                <pre><code>zram-settings</code></pre>
+
+                <p>Run Local AI models:</p>
+                <pre><code>install-ollama</code></pre>
+
+                <p>Get detailed network information:</p>
+                <pre><code>net-info</code></pre>
+
+                <p>Get system information:</p>
+                <pre><code>zenclora-fetch</code></pre>
+            </section>
+
+            <section id="roadmap">
+                <h2>Roadmap</h2>
+                <ul>
+                    <li>Further simplify usage with more automation commands.</li>
+                </ul>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Email the lead developer: <a href="mailto:root0emir@protonmail.com">root0emir@protonmail.com</a></p>
+                <p>YouTube Channel for updates and intros: <a href="https://www.youtube.com/@root0emir"
+                        target="_blank">@root0emir</a></p>
+                <p>Follow on X for development and community: <a href="https://x.com/root0emir"
+                        target="_blank">@root0emir</a></p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Zenclora Linux Project. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Releases - Zenclora Linux</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Assets/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Fira+Code&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .releases-container {
+            padding-top: 10rem;
+        }
+
+        .release-item {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .release-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .release-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 1rem;
+        }
+
+        .version-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .release-date {
+            color: #8fa3b7;
+            font-size: 0.9rem;
+        }
+
+        .changelog ul {
+            list-style: none;
+            padding-left: 0.5rem;
+        }
+
+        .changelog li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .changelog li i {
+            color: var(--secondary-color);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="releases.html">Releases</a>
+        <a href="docs.html">Docs</a>
+        <a href="index.html#download" class="btn-download">Download</a>
+    </nav>
+
+    <section class="releases-container">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <h1>Release Information</h1>
+            <p class="subtitle">The developmental journey of Zenclora.</p>
+        </div>
+
+
+        <div class="release-item">
+            <div class="release-header">
+                <div>
+                    <span class="version-badge" style="background: var(--secondary-color);">v1.0 "Zenny"</span>
+                    <h2 style="margin-top: 0.8rem;"></h2>
+                </div>
+                <span class="release-date">January 16, 2026</span>
+            </div>
+            <div class="changelog">
+                <h3>Changes:</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i>Zenclora OS Released.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Zenclora OS Project. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
