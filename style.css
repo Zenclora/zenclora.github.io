@@ -461,18 +461,37 @@ pre {
 
 .changelog li {
     margin-bottom: 0.8rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
+    position: relative;
+    padding-left: 1.8rem;
+    line-height: 1.6;
+    display: block;
+    /* Removed flex to prevent anonymous flex item issues with text/code mix */
 }
 
 .changelog li i {
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
     color: var(--secondary-color);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 code {
     font-family: 'Fira Code', monospace;
+    background: rgba(160, 196, 255, 0.1);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.95em;
+    color: #4a5568;
+    white-space: nowrap;
+}
+
+pre code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+    white-space: pre;
+    font-size: inherit;
 }
 
 /* Mobile Responsiveness */
