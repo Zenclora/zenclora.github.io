@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Zenclora Linux</title>
+    <meta name="description" content="Complete documentation for Zenclora OS and ZPM package manager.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Assets/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Fira+Code&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-home">Zenclora</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#zpm">ZPM</a>
+        <a href="news.html">News</a>
+        <a href="releases.html">Releases</a>
+        <a href="docs.html" class="active">Docs</a>
+        <a href="index.html#download" class="btn-download"><i class="fas fa-download"></i> Download</a>
+    </nav>
+
+
+
+    <div class="container docs-layout">
+        <aside class="docs-sidebar">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="#about">What is it?</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#requirements">System Requirements</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#nvidia">NVIDIA Driver Setup</a></li>
+                <li><a href="#zpm">ZPM Package Manager</a></li>
+                <li><a href="#system">System Utilities</a></li>
+                <li><a href="#tools">Zen Tools</a></li>
+                <li><a href="#zpm-internals">How ZPM Works?</a></li>
+                <li><a href="#known-issues">Known Issues</a></li>
+                <li><a href="#commands">Commands</a></li>
+                <li><a href="#project-policy">Project Policies</a></li>
+                <li><a href="#disclaimer">Disclaimer</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+        </aside>
+
+        <main class="docs-content">
+            <section id="about">
+                <h2>What is Zenclora?</h2>
+                <p>Zenclora is a Debian-based desktop Linux distribution optimized for stability, gaming, and daily
+                    use.
+                    Built with a philosophy of simplicity and peace, Zenclora eliminates bloat and complexity while
+                    providing powerful tools for modern computing.</p>
+                <p>Key features include:</p>
+                <ul>
+                    <li><strong>ZPM (Zen Package Manager)</strong> - Install apps with simple, elegant commands</li>
+                    <li><strong>Optimized GNOME Desktop</strong> - Beautiful, minimal, and customized interface</li>
+                    <li><strong>Debian Stable Base</strong> - Rock-solid foundation with security updates</li>
+                </ul>
+            </section>
+
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+
+                <h3>What is Zenclora OS?</h3>
+                <p>Zenclora OS is a Debian-based, stability-focused Linux distribution designed for everyday use. It
+                    combines the rock-solid foundation of Debian with optimized performance and a curated user
+                    experience.</p>
+
+                <h3>What makes Zenclora OS different from other Linux distributions?</h3>
+                <ul>
+                    <li><strong>ZPM (Zen Package Manager)</strong> — A custom-built package and system manager designed
+                        exclusively for Zenclora OS.</li>
+                    <li><strong>Performance Tuning</strong> — Kernel-level optimizations that make Zenclora noticeably
+                        faster than vanilla Debian.</li>
+                    <li><strong>Polished Desktop</strong> — A beautifully customized GNOME desktop environment out of
+                        the box.</li>
+                </ul>
+
+                <h3>What is ZPM (Zen Package Manager)?</h3>
+                <p>ZPM is a package and system manager that lets you install popular software not found in the official
+                    Debian repositories with a single command. It also simplifies complex system management tasks and
+                    includes a set of helpful utility tools.</p>
+                <p>For example:</p>
+                <pre><code>sudo zen install brave steam vscode
+sudo zen remove steam
+sudo zen system dns
+sudo zen tools formatusb</code></pre>
+                <p>That's it — simple and straightforward.</p>
+                <p>The goal of ZPM is to save users time, make Linux easier to use, prevent security risks from
+                    untrusted third-party repositories, and provide a clean, well-organized system.</p>
+
+                <h3>Why is Zenclora OS more performant than stock Debian?</h3>
+                <p>Zenclora OS applies kernel-level tweaks and disables unnecessary kernel features to boost overall
+                    system performance. These optimizations result in a snappier, more responsive experience compared to
+                    a default Debian installation.</p>
+
+                <h3>Is NVIDIA supported?</h3>
+                <p>Yes! After installing Zenclora OS, simply run:</p>
+                <pre><code>sudo zen install nvidia-driver</code></pre>
+                <p>This will automatically detect and install the correct proprietary driver for your GPU.</p>
+
+                <h3>Can I play games on Zenclora OS?</h3>
+                <p>Absolutely. Zenclora OS's performance optimizations provide a smooth gaming experience, and ZPM gives
+                    you quick access to gaming software like Steam, Lutris, Wine, and more.</p>
+
+                <h3>I'm completely new to Linux. Is Zenclora OS right for me?</h3>
+                <p>If you're eager to learn Linux and aren't afraid of the terminal, then yes — Zenclora OS is a great
+                    choice. ZPM handles much of the complexity for you, making the learning curve much gentler.</p>
+
+                <h3>Where can I follow new releases and updates?</h3>
+                <p>Updates and announcements are posted on my <a href="https://www.youtube.com/@linux-tech-channel"
+                        target="_blank">YouTube channel</a> and <a href="https://x.com/root0emir" target="_blank">X
+                        (Twitter)</a> account.</p>
+
+                <h3>I found a bug. What should I do?</h3>
+                <p>Send an email to <a href="mailto:root0emir@protonmail.com">root0emir@protonmail.com</a> with a
+                    detailed description of the issue. If it's a Zenclora-side bug, it will be addressed in the next
+                    update.</p>
+            </section>
+
+            <section id="requirements">
+                <h2>System Requirements</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Minimum (Runs)</th>
+                                <th>Recommended (Smooth Experience)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Processor (CPU)</td>
+                                <td>1.0 GHz Dual-Core (64-bit)</td>
+                                <td>2.0 GHz+ Quad-Core</td>
+                            </tr>
+                            <tr>
+                                <td>Memory (RAM)</td>
+                                <td>2 GB</td>
+                                <td>4 GB or more</td>
+                            </tr>
+                            <tr>
+                                <td>Storage (Disk)</td>
+                                <td>10 GB (System only)</td>
+                                <td>25 GB+ (Including apps and data)</td>
+                            </tr>
+                            <tr>
+                                <td>Graphics (GPU)</td>
+                                <td>Integrated Graphics (Intel HD, etc.)</td>
+                                <td>GPU with 3D acceleration support</td>
+                            </tr>
+                            <tr>
+                                <td>Display Resolution</td>
+                                <td>1024 × 768</td>
+                                <td>1920 × 1080 (Full HD)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="installation">
+                <h2>Installation</h2>
+                <p><strong>Step 1:</strong> Download the ISO file from the official website or SourceForge.</p>
+                <p><strong>Step 2:</strong> Create a bootable USB drive using Ventoy, Rufus, or Balena Etcher.</p>
+                <p><strong>Step 3:</strong> Enter your BIOS and boot from the USB drive.</p>
+                <p><strong>Step 4:</strong> Choose "Live Mode" to try Zenclora, or start the Debian Installer for
+                    permanent installation.</p>
+
+                <p><strong>Note:</strong> If using NVIDIA GPU, ensure nouveau driver compatibility
+                    or install proprietary drivers after installation using <code>zen install nvidia-driver</code></p>
+
+                <p><strong>Live Mode Exit:</strong> When shutting down in Live mode, press <strong>Enter</strong>
+                    at the Plymouth screen to safely remove the live medium.</p>
+            </section>
+
+            <section id="nvidia">
+                <h2>NVIDIA Driver Installation</h2>
+                <p>Installing the NVIDIA proprietary driver on Zenclora OS is as simple as a single command:</p>
+                <pre><code>sudo zen install nvidia-driver</code></pre>
+                <p>ZPM will automatically detect your GPU and install the appropriate driver version. Once the
+                    installation is complete, <strong>reboot your system</strong> for the changes to take effect.</p>
+            </section>
+
+            <section id="zpm">
+                <h2>ZPM - Zen Package Manager</h2>
+                <p>ZPM is Zenclora's unified package manager that simplifies software installation. Just use <code>zen</code> (or the alias <code>zpm</code>) – no more searching for repositories or adding GPG keys manually.</p>
+
+                <h3>Basic Usage</h3>
+                <pre><code>zen install &lt;package&gt;    # Install a package
+zen remove &lt;package&gt;     # Remove a package
+zen update               # Update system and packages
+zen list                 # List available packages
+zen help                 # Show help message</code></pre>
+
+                <h3>Available Packages</h3>
+
+                <h4>Gaming</h4>
+                <pre><code>zen install steam            # Steam with all dependencies
+zen install gaming-pack      # Lutris, Wine, MangoHud, GameMode</code></pre>
+
+                <h4>Browsers</h4>
+                <pre><code>zen install chrome           # Google Chrome
+zen install librewolf        # LibreWolf 
+zen install brave            # Brave Browser
+zen install mullvad-browser  # Mullvad Browser</code></pre>
+
+                <h4>AI & Development</h4>
+                <pre><code>zen install windsurf         # Windsurf AI Editor
+zen install antigravity      # Antigravity AI
+zen install ollama           # Run local AI models
+zen install vscode           # Visual Studio Code
+zen install docker           # Docker with Compose</code></pre>
+
+                <h4>Media & Productivity</h4>
+                <pre><code>zen install spotify          # Spotify
+zen install signal           # Signal Messenger
+zen install editor-pack      # GIMP, Krita, Inkscape
+zen install producer-pack    # Ardour, Audacity, LMMS
+zen install office-pack      # LibreOffice suite</code></pre>
+
+                <h4>System & Performance</h4>
+                <pre><code>zen install flatpak          # Flatpak with Flathub
+zen install snap             # Snap package manager
+zen install liquorix         # Liquorix gaming kernel
+zen install nvidia-driver    # NVIDIA proprietary driver
+zen install rust             # Rust via rustup</code></pre>
+
+                <h4>Privacy</h4>
+                <pre><code>zen install mullvad-vpn      # Mullvad VPN client</code></pre>
+            </section>
+
+            <section id="system">
+                <h2>System Utilities</h2>
+                <p>ZPM includes powerful system management utilities accessible via <code>zen system</code>. These tools
+                    help you maintain, optimize, and troubleshoot your system.</p>
+
+                <h3>DNS Configuration</h3>
+                <p>Easily switch between popular DNS providers with persistent settings:</p>
+                <pre><code>sudo zen system dns</code></pre>
+                <p>Options: Google, Cloudflare, Quad9, AdGuard, OpenDNS, or custom DNS servers.</p>
+
+                <h3>ZRAM Management</h3>
+                <p>Configure compressed RAM-based swap for better performance:</p>
+                <pre><code>sudo zen system zram</code></pre>
+                <p>Benefits: Faster than disk swap, extends SSD lifespan, effective memory compression.</p>
+
+                <h3>System Optimization</h3>
+                <p>Free up memory and clear system caches instantly:</p>
+                <pre><code>sudo zen system optimize</code></pre>
+                <p>This command syncs filesystem, clears memory caches, optimizes swap, flushes network buffers, and
+                    runs SSD TRIM.</p>
+
+                <h3>CPU Mitigations</h3>
+                <p>Control CPU security mitigations (Spectre/Meltdown) for performance tuning:</p>
+                <pre><code>sudo zen system mitigations</code></pre>
+                <p><strong>Warning:</strong> Disabling mitigations improves performance but reduces security.</p>
+
+                <h3>System Information</h3>
+                <p>Get detailed hardware and software information:</p>
+                <pre><code>zen system info</code></pre>
+                <p>Shows: OS, Kernel, CPU, Memory, Storage, GPU, Network, Services, and Security status.</p>
+
+                <h3>Service Manager</h3>
+                <p>Manage systemd services interactively:</p>
+                <pre><code>sudo zen system services</code></pre>
+                <p>Actions: Start, Stop, Restart, Enable, Disable, Mask, Unmask, View Logs.</p>
+
+                <h3>Package Viewer</h3>
+                <p>Explore installed packages on your system:</p>
+                <pre><code>zen system packages</code></pre>
+                <p>Features: List all, search, view details, recently installed, package count, largest packages.</p>
+
+                <h3>Log Viewer</h3>
+                <p>View and manage system logs:</p>
+                <pre><code>zen system logs</code></pre>
+                <p>Options: System logs, kernel logs, boot logs, auth logs, application logs, live stream, clear old
+                    logs.</p>
+
+                <h3>Network Reset</h3>
+                <p>Reset all network rules and configurations:</p>
+                <pre><code>sudo zen system netfix</code></pre>
+                <p>Flushes iptables, resets nftables, clears DNS cache, resets routing, restarts network services.</p>
+
+                <h3>APT Repair</h3>
+                <p>Fix common APT and dpkg issues:</p>
+                <pre><code>sudo zen system aptfix</code></pre>
+                <p>Checks for locks, broken packages, fixes dependencies, cleans cache, updates package lists.</p>
+            </section>
+
+            <section id="tools">
+                <h2>Zen Tools</h2>
+                <p>ZPM provides utility tools for common system tasks via <code>zen tools</code>.</p>
+
+                <h3>USB Formatter</h3>
+                <p>Format USB drives with various filesystems:</p>
+                <pre><code>sudo zen tools formatusb</code></pre>
+                <p>Supported formats: FAT32 (cross-platform), NTFS (Windows), ext4 (Linux), exFAT (large files).</p>
+                <p>Features: Automatic device detection, safety checks to prevent formatting system drives.</p>
+
+                <h3>DEB Installer</h3>
+                <p>Install .deb packages easily:</p>
+                <pre><code>sudo zen tools debinstaller</code></pre>
+                <p>Options: Install from local file, install from URL, view recently installed packages.</p>
+
+                <h3>File Manager</h3>
+                <p>File management utilities from the terminal:</p>
+                <pre><code>sudo zen tools filemanager</code></pre>
+                <p>Operations: Change permissions (chmod), change ownership (chown), find files, find large files,
+                    delete files/directories.</p>
+            </section>
+
+            <section id="zpm-internals">
+                <h2>How ZPM Works?</h2>
+                <p>ZPM works by integrating the official APT repositories of packages into the system. This allows the installed software to be updated directly from its official sources and managed in full compatibility with the system.</p>
+                <p>ZPM targets software that is generally not available in Debian repositories but is widely used. Examples include popular applications such as <strong>Steam, Spotify, Brave, and VSCode</strong>.</p>
+                <p>The main objective of this approach is to prevent users from risking their systems by adding random and unreliable repositories and to avoid "repository chaos."</p>
+
+                <h3>Package Policy</h3>
+                <p>The following principles are applied within the scope of ZPM:</p>
+                <ul>
+                    <li><strong>No On-Demand Addition:</strong> Packages are not added based on user requests.</li>
+                    <li><strong>Verified Reliability:</strong> Unrecognized software or software with unverified reliability is not included in the system.</li>
+                    <li><strong>Official Maintainers Only:</strong> If a software is maintained by a third party (volunteer) instead of its official developer, that package is not added.</li>
+                </ul>
+
+                <h3>Security Approach</h3>
+                <p>There are two major risks at the heart of these restrictions:</p>
+                <ul>
+                    <li><strong>Supply Chain Attacks:</strong> Packages from third-party sources may contain malicious code.</li>
+                    <li><strong>FrankenDebian Problem:</strong> Mixing different and incompatible repositories can lead to system instability and dependency issues.</li>
+                </ul>
+                <p>ZPM adopts a controlled and selective package management model to minimize these risks.</p>
+            </section>
+
+            <section id="known-issues">
+                <h2>Known Issues</h2>
+
+                <h3>Wrong language after installation</h3>
+                <p>After installing Zenclora OS, the system language may default to English instead of your selected
+                    language. This is caused by a compatibility issue between the Debian installer and GNOME. To fix it,
+                    go to <strong>GNOME Settings → Region & Language</strong> and select your preferred language.</p>
+
+                <h3>Plymouth screen hangs on shutdown in Live mode</h3>
+                <p>When shutting down in Live mode, the Plymouth splash screen may appear stuck. Simply press
+                    <strong>Enter</strong> to proceed and safely remove the live medium.
+                </p>
+            </section>
+
+            <section id="commands">
+                <h2>Zenclora Commands</h2>
+                <p>Display system information with Zenclora branding:</p>
+                <pre><code>zenclora-fetch</code></pre>
+                <p>This command shows your system specs, Zenclora version, and ASCII art in a beautiful terminal output.
+                </p>
+            </section>
+
+            <section id="project-policy">
+                <h2>Project Status & Policies</h2>
+                <p>Zenclora OS is a <strong>hobby project</strong> developed during limited personal time. As such,
+                    updates and bug fixes may take longer than professional distributions.</p>
+
+                <div class="alert note">
+                    <i class="fas fa-info-circle"></i>
+                    <p><strong>Independent Project:</strong> Zenclora OS is completely independent and <strong>does not
+                            accept donations</strong>. Please beware of any fake donation calls made in the project's
+                        name.</p>
+                </div>
+
+                <h3>Contributing Policy</h3>
+                <p>At this stage, I <strong>do not accept direct external code contributions</strong>. Maintaining
+                    security and system integrity requires rigorous auditing of all code. To ensure consistency, the
+                    entire development process is managed centrally. This policy may be re-evaluated in the future if a
+                    secure and auditable contribution framework is established.</p>
+
+                <h3>Ownership & Copyright</h3>
+                <p>Zenclora OS is developed and managed by <strong>root0emir</strong>. The project code, build structure
+                    (releng), and visual assets may not be used in other projects without explicit permission.</p>
+
+                <h3>Official Distribution</h3>
+                <div class="alert warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>The <strong>only official source</strong> for Zenclora OS is my <a
+                            href="https://sourceforge.net/projects/zenclora/" target="_blank">SourceForge page</a>.
+                        Files downloaded from other locations may be modified or unsafe. I strongly recommend using
+                        only the official release for your security.</p>
+                </div>
+            </section>
+
+            <section id="disclaimer">
+                <h2>Disclaimer & Terms of Use</h2>
+                <p>Zenclora OS is a Debian-based project provided <strong>"as is"</strong>. The developer is not
+                    responsible for any data loss, system failure, or damage resulting from its use.</p>
+                <p>Users assume full responsibility for any system modifications. Low-level changes (Kernel, Bootloader,
+                    Partitioning) can lead to system instability.</p>
+                <p>As an experimental hobby project, seamless operation across every hardware and software combination
+                    is not guaranteed. <strong>Always test the system in a non-critical environment first.</strong></p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Lead Developer: <a href="mailto:root0emir@protonmail.com">root0emir@protonmail.com</a></p>
+                <p>X (Twitter): <a href="https://x.com/root0emir" target="_blank">@root0emir</a></p>
+                <p>GitHub: <a href="https://github.com/root0emir" target="_blank">@root0emir</a></p>
+            </section>
+
+            <section id="links">
+                <h2>Links</h2>
+                <p>Official Site: <a href="https://zenclora.org" target="_blank">zenclora.org</a></p>
+                <p>YouTube: <a href="https://www.youtube.com/@linux-tech-channel"
+                        target="_blank">@linux-tech-channel</a></p>
+                <p>GitHub Organization: <a href="https://github.com/Zenclora" target="_blank">github.com/Zenclora</a>
+                </p>
+                <p>SourceForge: <a href="https://sourceforge.net/projects/zenclora/"
+                        target="_blank">sourceforge.net/projects/zenclora</a></p>
+                <p>DistroWatch: <a href="https://distrowatch.com/table.php?distribution=zenclora"
+                        target="_blank">distrowatch.com</a></p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="Assets/zenny.png" alt="Zenny" class="footer-logo">
+                <span>Zenclora OS</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Zenclora" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/root0emir" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://sourceforge.net/projects/zenclora/" target="_blank"><i class="fas fa-download"></i></a>
+            </div>
+            <p>© 2026 Zenclora Linux Project. All rights reserved.</p>
+            <p class="footer-quote">"Find your peace in the terminal."</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
