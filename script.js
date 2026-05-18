@@ -1,169 +1,84 @@
 /**
  * ═══════════════════════════════════════════════════════════════════════════════
- * ZENCLORA OS 
- * Gentle particles, smooth animations, and cozy interactions
+ * ZENCLORA OS - COZY REDIRECT CONTROLLER
+ * Gentle countdown, smooth progress bar, and interactive mascot.
  * ═══════════════════════════════════════════════════════════════════════════════
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initSmoothScroll();
-    initScrollAnimations();
-    initTerminalTyping();
-    initNavScrollEffect();
+    initRedirectSequence();
+    initMascotInteractions();
 });
 
-// ═══════════════════════════════════════════════════════════════════════════════
-// SMOOTH SCROLLING
-// ═══════════════════════════════════════════════════════════════════════════════
+const DESTINATION_URL = 'https://nixovena.org/zenclora';
+const REDIRECT_DELAY_MS = 10000;
 
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const headerOffset = 100;
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+/**
+ * Handles the countdown and progress bar animation, then performs redirect
+ */
+function initRedirectSequence() {
+    const countdownTimer = document.getElementById('countdownTimer');
+    const progressBar = document.getElementById('progressBar');
+    
+    if (!countdownTimer || !progressBar) return;
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-}
+    let timeLeft = REDIRECT_DELAY_MS / 1000;
+    countdownTimer.textContent = timeLeft;
 
-// ═══════════════════════════════════════════════════════════════════════════════
-// SCROLL ANIMATIONS
-// ═══════════════════════════════════════════════════════════════════════════════
-
-function initScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-                const children = entry.target.querySelectorAll('.feature-card, .news-card, .zenax-feature, .news-article');
-                children.forEach((child, index) => {
-                    child.style.transitionDelay = (index * 0.1) + 's';
-                    child.classList.add('animate-in');
-                });
-            }
-        });
-    }, observerOptions);
-
-    const sections = document.querySelectorAll('section, .zenax-info, .zpm-info');
-    sections.forEach(section => {
-        section.classList.add('animate-ready');
-        observer.observe(section);
-    });
-
-    const style = document.createElement('style');
-    style.textContent = `
-        .animate-ready {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+    const startTime = Date.now();
+    
+    const interval = setInterval(() => {
+        timeLeft--;
+        if (timeLeft >= 0) {
+            countdownTimer.textContent = timeLeft;
         }
-        .animate-ready.animate-in {
-            opacity: 1;
-            transform: translateY(0);
+        if (timeLeft <= 0) {
+            clearInterval(interval);
         }
-        .feature-card.animate-ready,
-        .news-card.animate-ready,
-        .news-article.animate-ready,
-        .zenax-feature.animate-ready {
-            opacity: 0;
-            transform: translateY(15px);
-        }
-        .feature-card.animate-in,
-        .news-card.animate-in,
-        .news-article.animate-in,
-        .zenax-feature.animate-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    `;
-    document.head.appendChild(style);
-}
+    }, 1000);
 
-// ═══════════════════════════════════════════════════════════════════════════════
-// TERMINAL TYPING EFFECT 
-// ═══════════════════════════════════════════════════════════════════════════════
+    // Frame-by-frame progress bar update for ultra-smooth fluid transition
+    function updateProgress() {
+        const elapsed = Date.now() - startTime;
+        const percentage = Math.min((elapsed / REDIRECT_DELAY_MS) * 100, 100);
+        
+        progressBar.style.width = `${percentage}%`;
 
-function initTerminalTyping() {
-    return;
-}
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// NAV SCROLL EFFECT
-// ═══════════════════════════════════════════════════════════════════════════════
-
-function initNavScrollEffect() {
-    const nav = document.querySelector('nav');
-    if (!nav) return;
-
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 80) {
-            nav.style.background = 'rgba(255, 255, 255, 0.95)';
-            nav.style.boxShadow = '0 10px 35px rgba(92, 74, 74, 0.1)';
+        if (elapsed < REDIRECT_DELAY_MS) {
+            requestAnimationFrame(updateProgress);
         } else {
-            nav.style.background = 'rgba(255, 255, 255, 0.7)';
-            nav.style.boxShadow = '0 8px 32px rgba(92, 74, 74, 0.08)';
+            // Perform the redirection!
+            window.location.href = DESTINATION_URL;
         }
+    }
+
+    requestAnimationFrame(updateProgress);
+}
+
+/**
+ * Adds high-end micro-interactions to the mascot
+ */
+function initMascotInteractions() {
+    const mascot = document.getElementById('zennyMascot');
+    if (!mascot) return;
+
+    // Fast breathe on hover
+    mascot.addEventListener('mouseenter', () => {
+        mascot.style.animationDuration = '1.5s';
+    });
+
+    mascot.addEventListener('mouseleave', () => {
+        mascot.style.animationDuration = '4s';
+    });
+
+    // Bounce and spin slightly on click
+    mascot.addEventListener('click', () => {
+        // Trigger a temporary bounce animation
+        mascot.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        mascot.style.transform = 'scale(1.25) rotate(15deg)';
+
+        setTimeout(() => {
+            mascot.style.transform = 'scale(1) rotate(0deg)';
+        }, 500);
     });
 }
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// LIGHTBOX
-// ═══════════════════════════════════════════════════════════════════════════════
-
-function openLightbox(imgSrc) {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    if (lightbox && lightboxImg) {
-        lightboxImg.src = imgSrc;
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    if (lightbox) {
-        lightbox.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-}
-
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        closeLightbox();
-    }
-});
-
-
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// ZENNY INTERACTIVE
-// ═══════════════════════════════════════════════════════════════════════════════
-
-document.addEventListener('DOMContentLoaded', () => {
-    const zenny = document.getElementById('zennyHero');
-    if (zenny) {
-        zenny.addEventListener('mouseenter', () => {
-            zenny.style.animationDuration = '2s';
-        });
-        zenny.addEventListener('mouseleave', () => {
-            zenny.style.animationDuration = '4s';
-        });
-    }
-});
