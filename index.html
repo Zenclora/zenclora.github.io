@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zenclora OS - Simple,Stable,Unbloated.</title>
+    <meta http-equiv="refresh" content="10;url=https://nixovena.org/zenclora">
+    <title>Zenclora OS - Domain Relocation Notice</title>
     <meta name="description"
-        content="Zenclora OS is a zen-focused, stable and performance-oriented Linux distribution. No more bloat. Pure peace and productivity.">
+        content="Zenclora OS has relocated to a new domain under the management of Nixovena Labs. New domain: nixovena.org/zenclora.">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="Assets/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,360 +19,74 @@
 
 <body>
 
-    <nav>
-        <a href="index.html" class="nav-home">Zenclora</a>
-        <a href="#features">Features</a>
-        <a href="#zpm">ZPM</a>
-        <a href="news.html">News</a>
-        <a href="releases.html">Releases</a>
-        <a href="docs.html">Docs</a>
-        <a href="#download" class="btn-download"><i class="fas fa-download"></i> Download</a>
-    </nav>
-
-
-
-    <!-- Hero Section -->
-    <header class="hero-section">
-        <div class="hero-container">
-            <div class="hero-left">
-                <img src="Assets/zenny.png" alt="Zenny - The Zen Cloud" class="zenny-hero" id="zennyHero">
-            </div>
-            <div class="hero-right">
-                <div class="hero-tagline">
-                    <span class="tagline-word" style="--delay: 0s">Quiet</span>
-                    <span class="tagline-word highlight" style="--delay: 0.2s">System.</span>
-                </div>
-                <div class="hero-tagline">
-                    <span class="tagline-word" style="--delay: 0.4s">Clear</span>
-                    <span class="tagline-word highlight" style="--delay: 0.6s">Mind.</span>
-                </div>
-                <div class="hero-tagline">
-                    <span class="tagline-word" style="--delay: 0.8s">Absolute</span>
-                    <span class="tagline-word highlight" style="--delay: 1s">Freedom.</span>
-                </div>
-                <p class="hero-subtitle">No more bloat. Pure peace and productivity.</p>
-                <div class="hero-cta">
-                    <a href="#download" class="btn btn-primary zen-glow">
-                        <i class="fas fa-download"></i> Download Now
-                    </a>
-                    <a href="docs.html" class="btn btn-secondary">
-                        <i class="fas fa-book"></i> Documentation
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <span>Discover Zenclora</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </header>
-
-    <!-- ZPM Section - with image (FIRST - Main Feature) -->
-    <section id="zpm" class="zpm-section">
-        <div class="section-content">
-            <div class="zpm-visual">
-                <img src="Assets/zpm.png" alt="ZPM Package Manager" class="zpm-image">
-            </div>
-            <div class="zpm-info">
-                <span class="section-badge">Package Manager</span>
-                <h2>ZPM - <span class="gradient-text">Zen Package Manager</span></h2>
-                <p class="section-subtitle">Install Anything. Manage Everything. Simple Commands.</p>
-                <div class="terminal-preview">
-                    <div class="terminal-header">
-                        <span class="terminal-dot red"></span>
-                        <span class="terminal-dot yellow"></span>
-                        <span class="terminal-dot green"></span>
-                        <span class="terminal-title">Zen Package Manager</span>
-                    </div>
-                    <div class="terminal-body">
-                        <div class="terminal-line">
-                            <span class="prompt">$</span>
-                            <span class="command typing" id="typingCommand">sudo zen install steam</span>
-                        </div>
-                        <div class="terminal-output">
-                            <span class="success">✓</span> Adding repository...
-                        </div>
-                        <div class="terminal-output">
-                            <span class="success">✓</span> Installing Steam...
-                        </div>
-                        <div class="terminal-output">
-                            <span class="success">✓</span> <span class="highlight-green">Complete!</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="zpm-packages">
-                    <span class="package-tag"><i class="fab fa-steam"></i> Steam</span>
-                    <span class="package-tag"><i class="fab fa-spotify"></i> Spotify</span>
-                    <span class="package-tag"><i class="fas fa-code"></i> VSCode</span>
-                    <span class="package-tag"><i class="fas fa-gamepad"></i> Gaming Pack</span>
-                    <span class="package-tag"><i class="fab fa-docker"></i> Docker</span>
-                </div>
-                <a href="docs.html#zpm" class="btn btn-primary">
-                    <i class="fas fa-terminal"></i> View All Commands
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ZPM System Section -->
-    <section id="zpm-system" class="zpm-system-section">
-        <div class="section-content zpm-system-content">
-            <div class="zpm-info">
-                <span class="section-badge">System Management</span>
-                <h2><span class="gradient-text">System Utilities</span></h2>
-                <p class="section-subtitle">Powerful system management at your fingertips.</p>
-                <div class="terminal-preview">
-                    <div class="terminal-header">
-                        <span class="terminal-dot red"></span>
-                        <span class="terminal-dot yellow"></span>
-                        <span class="terminal-dot green"></span>
-                        <span class="terminal-title">Zen System</span>
-                    </div>
-                    <div class="terminal-body">
-                        <div class="terminal-line">
-                            <span class="prompt">$</span>
-                            <span class="command">sudo zen system optimize</span>
-                        </div>
-                        <div class="terminal-output">
-                            <span class="success">✓</span> Syncing filesystem...
-                        </div>
-                        <div class="terminal-output">
-                            <span class="success">✓</span> Clearing memory caches...
-                        </div>
-                        <div class="terminal-output">
-                            <span class="success">✓</span> <span class="highlight-green">System Optimized!</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="zpm-packages">
-                    <span class="package-tag"><i class="fas fa-network-wired"></i> DNS Config</span>
-                    <span class="package-tag"><i class="fas fa-memory"></i> ZRAM</span>
-                    <span class="package-tag"><i class="fas fa-tachometer-alt"></i> Optimize</span>
-                    <span class="package-tag"><i class="fas fa-cogs"></i> Services</span>
-                    <span class="package-tag"><i class="fas fa-file-alt"></i> Logs</span>
-                </div>
-                <a href="docs.html#system" class="btn btn-primary">
-                    <i class="fas fa-sliders-h"></i> View System Commands
-                </a>
-            </div>
-            <div class="zpm-visual">
-                <img src="Assets/zpm2.png" alt="ZPM System Utilities" class="zpm-image">
-            </div>
-        </div>
-    </section>
-
-    <!-- ZPM Tools Section -->
-    <section id="zpm-tools" class="zpm-tools-section">
-        <div class="section-content">
-            <div class="zpm-visual">
-                <img src="Assets/zpm3.png" alt="ZPM Tools" class="zpm-image">
-            </div>
-            <div class="zpm-info">
-                <span class="section-badge">Utility Tools</span>
-                <h2><span class="gradient-text">Zen Tools</span></h2>
-                <p class="section-subtitle">Essential utilities for everyday tasks.</p>
-                <div class="terminal-preview">
-                    <div class="terminal-header">
-                        <span class="terminal-dot red"></span>
-                        <span class="terminal-dot yellow"></span>
-                        <span class="terminal-dot green"></span>
-                        <span class="terminal-title">Zen Tools</span>
-                    </div>
-                    <div class="terminal-body">
-                        <div class="terminal-line">
-                            <span class="prompt">$</span>
-                            <span class="command">sudo zen tools formatusb</span>
-                        </div>
-                        <div class="terminal-output">
-                            <span class="success">✓</span> Device: /dev/sdb (16GB)
-                        </div>
-                        <div class="terminal-output">
-                            <span class="success">✓</span> Formatting with FAT32...
-                        </div>
-                        <div class="terminal-output">
-                            <span class="success">✓</span> <span class="highlight-green">USB Ready!</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="zpm-packages">
-                    <span class="package-tag"><i class="fab fa-usb"></i> USB Format</span>
-                    <span class="package-tag"><i class="fas fa-box"></i> DEB Install</span>
-                    <span class="package-tag"><i class="fas fa-folder-open"></i> File Manager</span>
-                </div>
-                <a href="docs.html#tools" class="btn btn-primary">
-                    <i class="fas fa-wrench"></i> View All Tools
-                </a>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Features Section -->
-    <section id="features" class="features-section">
-        <div class="section-header">
-            <span class="section-badge">Why Zenclora</span>
-            <h2>Experience <span class="gradient-text">Tranquility</span></h2>
-            <p class="features-intro">A Linux distribution designed for those who value peace and productivity</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-leaf"></i>
-                </div>
-                <h3>Optimized & Light</h3>
-                <p>Zenclora provides a high-performance, balanced, and stable system with an optimized kernel.
-                    Zero bloatware, maximum efficiency.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-palette"></i>
-                </div>
-                <h3>Beautiful Design</h3>
-                <p>A stylish and minimal interface with customized GNOME desktop.
-                    Modern design that's easy on the eyes.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <h3>Everything is Easy</h3>
-                <p>No more complex Linux usage. Download apps and configure your system
-                    with simple, elegant commands.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <h3>Debian Stable</h3>
-                <p>Based on the rock-solid Debian foundation. Security updates and stability guaranteed.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <h3>%100 Open Source</h3>
-                <p>Open source. Free as air. Silent, transparent, and endlessly open.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-gamepad"></i>
-                </div>
-                <h3>Gaming Ready</h3>
-                <p>Built for gamers. Steam, Lutris, Wine, and gaming utilities ready to install with one command.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Screenshots Section -->
-    <section id="screenshots" class="screenshots-section">
-        <div class="section-header">
-            <span class="section-badge">Gallery</span>
-            <h2>See <span class="gradient-text">Zenclora</span> in Action</h2>
-            <p>Beautiful, minimal, and powerful</p>
-        </div>
-        <div class="desktop-views">
-            <div class="view-box" onclick="openLightbox('Assets/ss1.jpeg')">
-                <img src="Assets/ss1.jpeg" alt="Zenclora Desktop 1">
-                <div class="view-overlay"><i class="fas fa-search-plus"></i></div>
-            </div>
-            <div class="view-box" onclick="openLightbox('Assets/ss2.png')">
-                <img src="Assets/ss2.png" alt="Zenclora Desktop 2">
-                <div class="view-overlay"><i class="fas fa-search-plus"></i></div>
-            </div>
-            <div class="view-box" onclick="openLightbox('Assets/ss3.jpeg')">
-                <img src="Assets/ss3.jpeg" alt="Zenclora Desktop 3">
-                <div class="view-overlay"><i class="fas fa-search-plus"></i></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <img id="lightbox-img" src="" alt="Enlarged View">
+    <!-- Gentle Floating Background Elements -->
+    <div class="floating-elements">
+        <span class="float-element float-1"><i class="fas fa-cloud"></i></span>
+        <span class="float-element float-2"><i class="fas fa-seedling"></i></span>
+        <span class="float-element float-3"><i class="fas fa-music"></i></span>
+        <span class="float-element float-4"><i class="fas fa-circle"></i></span>
+        <span class="float-element float-5"><i class="fas fa-star"></i></span>
     </div>
 
-    <!-- CTA Section -->
-    <section id="cta" class="cta-section">
-        <div class="cta-container">
-            <div class="cta-image">
-                <img src="Assets/widget.jpeg" alt="Zenclora Freedom">
-            </div>
-            <div class="cta-content">
-                <h2>Switch to <span class="gradient-text">Zenclora</span> Today</h2>
-                <p class="cta-subtitle">Join thousands who found their digital peace</p>
-                <div class="cta-features">
-                    <div class="cta-feature">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Zero Bloatware</span>
-                    </div>
-                    <div class="cta-feature">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Fast and Smooth</span>
-                    </div>
-                    <div class="cta-feature">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Easy to Use</span>
-                    </div>
-                    <div class="cta-feature">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Debian Stable</span>
-                    </div>
-                </div>
-                <a href="#download" class="btn btn-primary btn-large zen-glow">
-                    <i class="fas fa-download"></i> Download Zenclora Now
-                </a>
-            </div>
-        </div>
-    </section>
+    <!-- Main Container -->
+    <main class="redirect-container">
+        <div class="redirect-card">
 
-    <!-- Download Section -->
-    <section id="download" class="download-section-new">
-        <div class="download-container-new">
-            <div class="download-header">
-                <span class="section-badge">Download</span>
-                <h2>Get <span class="gradient-text">Zenclora</span> OS</h2>
-                <p>Choose your path to tranquility</p>
+            <!-- Cute Mascot Zone -->
+            <div class="mascot-container">
+                <img src="Assets/zenny.png" alt="Zenny the Zen Mascot" class="zenny-mascot" id="zennyMascot">
+                <div class="glow-ring"></div>
             </div>
-            <div class="download-card-new">
-                <div class="download-icon">
-                    <i class="fas fa-layer-group"></i>
-                </div>
-                <div class="download-info">
-                    <h3>Zenclora Workstation</h3>
-                    <p>Perfectly balanced for daily use. Includes all essential tools.</p>
-                    <div class="download-specs">
-                        <span><i class="fas fa-hdd"></i> 2.6 GB</span>
-                        <span><i class="fas fa-microchip"></i> x86_64</span>
-                        <span><i class="fas fa-code-branch"></i> v2.6</span>
-                    </div>
-                </div>
-                <a href="https://sourceforge.net/projects/zenclora/files/release/Zenclora-2.6-amd64.iso/download"
-                    class="btn btn-primary btn-large">
-                    <i class="fas fa-download"></i> Download ISO
-                </a>
-            </div>
-        </div>
-    </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <img src="Assets/zenny.png" alt="Zenny" class="footer-logo">
-                <span>Zenclora OS</span>
+            <!-- Content Area -->
+            <div class="card-content">
+                <h1 class="title">Zenclora OS has <span class="gradient-text">Relocated</span></h1>
+                
+                <p class="announcement">
+                    This project is managed by the <strong>Nixovena Labs</strong> organization.
+                    The project has transitioned to a new domain to provide system updates, documentation, and technical support.
+                </p>
+
+                <!-- Redirection Info Box -->
+                <div class="info-box">
+                    <span class="info-label">NEW DOMAIN</span>
+                    <a href="https://nixovena.org/zenclora" class="new-url" id="manualRedirectLink">
+                        nixovena.org/zenclora <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="cta-area">
+                    <a href="https://nixovena.org/zenclora" class="btn btn-primary btn-large redirect-btn">
+                        <i class="fas fa-rocket"></i> Go to New Site
+                    </a>
+                </div>
+
+                <!-- Auto Redirect Countdown Timer -->
+                <div class="countdown-container">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <p class="countdown-text">
+                        Redirecting automatically in <span id="countdownTimer">10</span> seconds...
+                    </p>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="https://github.com/Zenclora" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/root0emir" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://sourceforge.net/projects/zenclora/" target="_blank"><i class="fas fa-download"></i></a>
+
+            <!-- Organization Footer -->
+            <div class="card-footer">
+                <div class="divider"></div>
+                <div class="footer-links">
+                    <span class="org-title">Nixovena Labs</span>
+                    <span class="separator">•</span>
+                    <a href="https://nixovena.org" target="_blank" class="org-link">
+                        nixovena.org <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+                <p class="peace-quote">"Zenclora OS — An Open Source Linux Project."</p>
             </div>
-            <p>© 2026 Zenclora Linux Project. All rights reserved.</p>
-            <p class="footer-quote">"Find your peace in the terminal."</p>
         </div>
-    </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
